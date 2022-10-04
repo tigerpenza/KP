@@ -26,3 +26,10 @@ void ShowArray(string[] array)
     Write($"[{String.Join(", ", array)}]");
 }
 
+Write("Enter an array of strings: ");
+string[] startArr = ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries); 
+
+string[] newArr = ChangeArray(startArr);
+ShowArray(startArr);
+Write(" -> ");
+ShowArray(newArr);
